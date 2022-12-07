@@ -114,14 +114,16 @@ main {
 }
 
 .first-product-img {
-  align-items: center;
-  justify-content: center;
-  margin: 100px 100px 10px;
-  margin-bottom: 0;
-  width: 300px;
-  height: 300px;
-
   background-color: var(--first-color);
+  width: 258px;
+  height: 430px;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  justify-self: flex-end;
+  transform: translateX(1.5rem);
+  margin-left: 110px;
 }
 
 .info-first-product h1 {
@@ -450,10 +452,11 @@ footer {
   }
 
   .first-product-img {
-    margin-left: 700px;
-    margin-right: 700px;
-    width: 500px;
-    height: 500px;
+    margin-left: 800px;
+    margin-right: 350px;
+    margin-top: -300px;
+    width: 480px;
+    height: 880px;
   }
 
   .info-first-product {
