@@ -43,7 +43,7 @@
     -->
 
     <header>
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <svg
           class="nav-logo"
           xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@
 
         <div class="menu-bar">
           <a><span>STORE</span></a>
-          <a href="#home">Home</a>
+          <a href="#main-home">Home</a>
           <a href="#show-products">Products</a>
         </div>
 
@@ -78,12 +78,12 @@
       </nav>
     </header>
 
-    <div class="main-first-product">
+    <div class="main-first-product" id="main-home">
       <div class="first-product-img">
         <img src="./assets/images/home.png" alt="" />
       </div>
 
-      <div class="info-first-product">
+      <div class="info-first-product" id="info-first-product">
         <h1>New Sweatshirt <br /><span>COLLECTION 2022</span></h1>
         <h3>
           Latest arrival of the new Hanes Mid weight Crewneck sweatshirt
@@ -226,7 +226,9 @@
     <div class="menu-container hide" id="menu-container">
       <div class="menu" id="menu">
         <div class="menu-cart">
-          <a href="#home" class="home-container hide" id="home-btn">Home</a>
+          <a href="#main-home" class="home-container hide" id="home-btn"
+            >Home</a
+          >
           <a href="#show-products" class="products-container" id="products-btn"
             >Products</a
           >
