@@ -60,29 +60,21 @@ const items = [
   },
 ];
 
-const cartProducts = [
-  {
-    id: 3,
-    name: "Sweatshirts",
-    price: 24.0,
-    image: "assets/images/featured3.png",
-    category: "shirts",
-    quantity: 20,
-    quantitySelected: 1,
-  },
-];
+const cartProducts = [];
 
 function addProduct(itemId) {
   let productSelected = cartProducts.find((product) => product.id === itemId);
 
   if (productSelected) {
+    /* si productSelected es !== undefined : buscas el indice de ese producto dentro del arreglo.*/
     //Condicion para saber si aun pueden seleccionar mas productos de ese tipo
     let index = cartProducts.indexOf(productSelected);
-
+    // Si el producto ya existe dentro del arreglo, lo busca y se le suma 1 al quantity selected
     cartProducts[index].quantitySelected++;
   } else {
+    //si no existe el producto, creas un item y buscas el identificador para agregarlo al arreglo por primera vez.
     const item = items.find((item) => item.id === itemId);
-
+    // y agregas la propiedad quantity selected a ese nuevo item y lo metes al arreglo.
     item.quantitySelected = 1;
     cartProducts.push(item);
   }
@@ -90,8 +82,9 @@ function addProduct(itemId) {
   showProducts();
 }
 
+// Funcion encargada de mostrar los productos.
 function showProducts() {
-  const content = document.getElementById("cart-content");
+  const content = document.getElementById("cart-container");
 
   let fragment = "";
   cartProducts.forEach((product) => {
@@ -107,3 +100,13 @@ function showProducts() {
 
   content.innerHTML = fragment;
 }
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  if (scrollY >= 50) {
+    nav.classList.add("scroll-bg");
+  } else {
+    nav.classList.remove("scroll-bg");
+  }
+});

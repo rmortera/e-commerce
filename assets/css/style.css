@@ -67,12 +67,16 @@ img {
   padding: 1rem 1.5rem;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 1px 4px hsl(0deg 4% 15% / 10%);
   color: var(--title-color);
-  background-color: var(--container-color);
   position: fixed;
   width: 100%;
   z-index: 50;
+  transition: 0.5s;
+}
+.navbar.scroll-bg {
+  background-color: var(--container-color);
+  box-shadow: 0 1px 4px hsl(0deg 4% 15% / 10%);
+  transition: 0.5s;
 }
 
 .nav-logo {
@@ -80,15 +84,29 @@ img {
   fill: var(--first-color);
 }
 
-.store {
-  font-weight: 100;
-  font-size: 10px;
-  align-items: center;
+.menu {
+  font-weight: 500;
+  font-size: 15px;
   margin-left: 50px;
-  margin-top: 15px;
+  margin-top: 5px;
   position: fixed;
+  gap: 15rem;
+  display: inline-block;
+  word-spacing: 2.5rem;
 }
-.store {
+.menu span {
+  font-size: 18px;
+  font-weight: 600;
+}
+.menu span:hover {
+  color: var(--title-color);
+}
+.menu a:hover {
+  color: var(--first-color);
+}
+
+.menu a {
+  text-decoration: none;
   color: var(--title-color);
 }
 
@@ -442,8 +460,8 @@ footer {
 @media screen and (min-width: 992px) {
   .main-first-product {
     margin-top: 200px;
-    margin-right: 200px;
-    margin-left: 500px;
+    margin-right: 90px;
+    margin-left: 530px;
     align-items: center;
     justify-content: center;
   }
@@ -453,8 +471,8 @@ footer {
 
   .first-product-img {
     margin-left: 800px;
-    margin-right: 350px;
-    margin-top: -300px;
+    margin-right: 500px;
+    margin-top: -200px;
     width: 480px;
     height: 880px;
   }
