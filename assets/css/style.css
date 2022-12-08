@@ -86,16 +86,15 @@ img {
 
 .menu {
   font-weight: 500;
-  font-size: 15px;
+  font-size: 10px;
   margin-left: 50px;
   margin-top: 5px;
   position: fixed;
-  gap: 15rem;
   display: inline-block;
-  word-spacing: 2.5rem;
+  word-spacing: 1.5rem;
 }
 .menu span {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 600;
 }
 .menu span:hover {
@@ -458,6 +457,20 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
+  .menu {
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 50px;
+    margin-top: 5px;
+    position: fixed;
+    gap: 15rem;
+    display: inline-block;
+    word-spacing: 2.5rem;
+  }
+  .menu span {
+    font-size: 18px;
+    font-weight: 600;
+  }
   .main-first-product {
     margin-top: 200px;
     margin-right: 90px;
