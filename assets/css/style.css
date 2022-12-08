@@ -345,13 +345,6 @@ main {
   color: var(--text-color);
 }
 
-.our-information ul {
-  padding-top: 5rem;
-  padding-left: 2rem;
-  list-style: none;
-  padding-top: 1rem;
-}
-
 .our-information-container h3 {
   margin-top: 1rem;
 }
@@ -361,12 +354,17 @@ main {
   color: var(--text-color);
 }
 
+.our-information {
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+
 a:hover {
   color: var(--text-color-light);
 }
 
 .social-container {
-  margin-left: 1.7rem;
+  margin-left: -0.5rem;
   align-items: center;
   gap: 1rem;
   display: flex;
@@ -618,5 +616,9 @@ footer {
 
   .our-information-container {
     width: 100%;
+  }
+
+  .our-information {
+    display: inline-block;
   }
 }
