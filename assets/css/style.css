@@ -325,8 +325,12 @@ main {
 
 .product-counter:hover {
   background-color: var(--first-color);
-  color: var(--body-color);
+
   cursor: pointer;
+}
+
+.bx-plus:hover {
+  color: var(--container-color);
 }
 
 .product-to-add {
