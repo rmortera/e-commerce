@@ -379,7 +379,7 @@ a:hover {
 .footer-copy {
   display: block;
   text-align: center;
-  font-size: var(--smaller-font-size);
+  font-size: x-small;
   color: var(--text-color-light);
   margin: 3.5rem 0px 0rem;
   padding-bottom: 2rem;
