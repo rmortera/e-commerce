@@ -3,6 +3,12 @@ const body = document.body;
 const cartBtnOpen = document.getElementById("cart-btn");
 const cartBtnClose = document.getElementById("close-cart");
 const cartContainer = document.getElementById("cart-container");
+const menuContainer = document.getElementById("menu-container");
+const menuBtnOpen = document.getElementById("menu-btn");
+const menuBtnClose = document.getElementById("close-menu");
+
+const homeBtnClose = document.getElementById("home-btn");
+const productsBtnClose = document.getElementById("products-btn");
 
 const darkModeChange = () => {
   /*
@@ -31,6 +37,21 @@ cartBtnOpen.addEventListener("click", () =>
 
 cartBtnClose.addEventListener("click", () =>
   cartContainer.classList.add("hide")
+);
+
+menuBtnOpen.addEventListener("click", () =>
+  menuContainer.classList.remove("hide")
+);
+
+menuBtnClose.addEventListener("click", () =>
+  menuContainer.classList.add("hide")
+);
+
+homeBtnClose.addEventListener("click", () =>
+  menuContainer.classList.add("hide")
+);
+productsBtnClose.addEventListener("click", () =>
+  menuContainer.classList.add("hide")
 );
 
 const items = [

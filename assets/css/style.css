@@ -84,7 +84,7 @@ img {
   fill: var(--first-color);
 }
 
-.menu {
+.menu-bar {
   font-weight: 500;
   font-size: 10px;
   margin-left: 50px;
@@ -93,26 +93,29 @@ img {
   display: inline-block;
   word-spacing: 1.5rem;
 }
-.menu span {
+.menu-bar span {
   font-size: 12px;
   font-weight: 600;
-}
-.menu span:hover {
   color: var(--title-color);
 }
-.menu a:hover {
+.menu-bar span:hover {
+  color: var(--title-color);
+}
+.menu-bar a:hover {
   color: var(--first-color);
 }
 
-.menu a {
+.menu-bar a {
   text-decoration: none;
-  color: var(--title-color);
+  color: hsla(0, 0%, 15%, 0);
+  margin-top: 500px;
 }
 
 .icons-wrapper {
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-right: 1rem;
 }
 
 .bx-shopping-bag:hover {
@@ -413,6 +416,58 @@ footer {
   right: 1.5rem;
 }
 
+.menu-container {
+  background-color: rgba(109, 109, 109, 0.737);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  transition: left 0.3s linear;
+  padding: 2.5rem 1.5rem 1rem 1.5rem;
+}
+
+.menu-container.hide {
+  left: -100%;
+}
+
+.menu {
+  background-color: var(--container-color);
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: -4px 5px 10px rgb(147 147 147);
+  padding: 2.5rem 1.5rem 1rem 1.5rem;
+  z-index: 100;
+}
+
+.menu-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+.menu-cart {
+  margin: auto;
+  padding-top: 30%;
+}
+.menu-cart a {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  padding-top: 5rem;
+  color: var(--title-color);
+}
+.menu-cart a:hover {
+  color: var(--first-color);
+}
+
 .cart-shop {
   position: relative;
 }
@@ -457,7 +512,10 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
-  .menu {
+  .bx-grid-alt {
+    color: hsla(0, 0%, 100%, 0);
+  }
+  .menu-bar {
     font-weight: 500;
     font-size: 15px;
     margin-left: 50px;
@@ -467,9 +525,12 @@ footer {
     display: inline-block;
     word-spacing: 2.5rem;
   }
-  .menu span {
+  .menu-bar span {
     font-size: 18px;
     font-weight: 600;
+  }
+  .menu-bar a {
+    color: var(--title-color);
   }
   .main-first-product {
     margin-top: 200px;
