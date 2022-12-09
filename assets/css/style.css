@@ -239,6 +239,7 @@ main {
 
 .main-show-products li {
   font-weight: 500;
+  color: var(--title-color);
 }
 .main-show-products span {
   font-weight: 100;
@@ -247,12 +248,6 @@ main {
 .main-show-products li:hover {
   cursor: pointer;
   color: var(--first-color);
-}
-
-.show-products li {
-  color: var(--title-color);
-  font-size: 15px;
-  font-weight: 500;
 }
 
 .cart-content {
