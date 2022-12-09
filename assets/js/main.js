@@ -137,11 +137,8 @@ items.forEach((product) => {
 <button onclick="addProduct(${id})" class="product-counter">+</button>
 <img class="card-img mt-2" src="${image}" alt="Card image cap">
 <div class="card-body">
-
-<h5 class="card-title">${name}</h5>
-<p class="card-text">Price: ${price}</p>
-<p class="card-text">Category: ${category}</p>
-<p class="card-text">Quantity: ${quantity}</p>
+<p class="card-price"> <span>$${price}.00</span>    |  Stock: ${quantity}</p>
+<h5 class="card-title"><span>${name}</span></h5>
 </div>
 </div>
 
