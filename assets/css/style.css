@@ -584,27 +584,41 @@ i:hover {
 
   .main-show-products {
     max-width: 1000px;
-    width: 1900px;
-    margin: auto;
+    display: grid;
+    text-align: center;
     align-items: center;
     justify-content: center;
+    row-gap: 3rem;
+    column-gap: 10rem;
     padding-top: 5rem;
+    padding-bottom: 2rem;
+    margin: auto;
   }
 
-  .show-products {
-    width: 100%;
+  .main-show-products ul {
+    font-size: x-large;
+    text-decoration: none;
+    list-style: none;
   }
 
-  .show-products a {
-    font-size: 20px;
+  .main-show-products span {
+    font-size: small;
   }
-
-  .show-products2 {
-    width: 100%;
+  .one {
+    grid-column: 1;
+    grid-row: 1/1;
   }
-
-  .show-products2 a {
-    font-size: 20px;
+  .two {
+    grid-column: 3;
+    grid-row: 1 / 1;
+  }
+  .three {
+    grid-column: 2;
+    grid-row: 1 / 1;
+  }
+  .four {
+    grid-column: 4;
+    grid-row: 1/1;
   }
 
   .cart-content {
