@@ -128,11 +128,39 @@ function showProducts() {
 */
 
 const container = document.querySelector("#container");
+const showProducts = document.querySelector("#show-products");
 
 items.forEach((product) => {
   const { id, name, price, image, category, quantity } = product;
 
+  showProducts.innerHTML = `
+  <ul class="main-show-products" id="show-products">
+      <li class="one"
+        >Show all <br />
+        <span> show all products</span></li
+      >
+    
+    <li class="two"
+      >Shirts<br />
+      <span>4 Products</span></li
+    >
+      <li class="three"
+        >Hoodies<br />
+        <span>3 Products</span></li
+      >
+
+    <li class="four"
+      >Sweatshirts<br />
+      <span>4 Products</span></li
+    >
+  </ul>
+  `;
+
   container.innerHTML += `
+ 
+
+
+
 <div class="cart-content">
 <button onclick="addProduct(${id})" class="product-counter">+</button>
 <img class="card-img mt-2" src="${image}" alt="Card image cap">

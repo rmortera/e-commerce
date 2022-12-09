@@ -208,90 +208,57 @@ main {
 
 .main-show-products {
   max-width: 1000px;
-  padding: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  display: flex;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+  column-gap: 5rem;
+  padding-top: 1rem;
 }
-.main-show-products a:hover {
+.main-show-products ul {
+  text-decoration: none;
+  list-style: none;
+}
+.one {
+  grid-column: 1;
+  grid-row: 1/2;
+}
+.two {
+  grid-column: 1;
+  grid-row: 2 / 2;
+}
+.three {
+  grid-column: 2;
+  grid-row: 1 / 2;
+}
+.four {
+  grid-column: 2;
+  grid-row: 2/2;
+}
+
+.main-show-products li {
+  font-weight: 500;
+}
+.main-show-products span {
+  font-weight: 100;
+  font-size: x-small;
+}
+.main-show-products li:hover {
   cursor: pointer;
   color: var(--first-color);
 }
-.show-products {
-  max-width: 1000px;
-  padding: 1rem 1.5rem;
-  margin: auto;
-  width: 50%;
-  background-color: var(--body-color);
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-}
 
-.show-products a {
+.show-products li {
   color: var(--title-color);
   font-size: 15px;
   font-weight: 500;
-  margin-top: 1rem;
-}
-.show-products1 {
-  margin-top: 1rem;
-}
-
-.show-products a span {
-  font-size: 12px;
-  font-weight: 100;
-}
-
-.show-products2 {
-  padding: 1rem 1.5rem;
-  margin: 0.5rem 0.5rem 0.5rem;
-  width: 50%;
-  background-color: var(--body-color);
-
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-}
-.show-products2 a {
-  color: var(--title-color);
-  font-size: 15px;
-  font-weight: 500;
-  margin-top: 2rem;
-}
-
-.show-products2 a span {
-  font-size: 12px;
-  font-weight: 100;
 }
 
 .cart-content {
   padding: 1rem 1.5rem;
   margin: auto;
   align-items: center;
-}
-
-.show-products3 {
-  margin: -1rem auto;
-  width: 70%;
-  height: 65px;
-  padding-top: 15px;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 1px 4px hsl(0deg 4% 15% / 10%);
-  background-color: var(--container-color);
-  align-items: center;
-  justify-content: center;
-}
-
-.show-products3 h4 {
-  margin-left: 1.5rem;
-  word-spacing: 0.2rem;
-}
-
-.show-products3 h4 span {
-  margin-left: 10px;
-  font-size: 12px;
-  font-weight: 100;
 }
 
 .first-product-container {
