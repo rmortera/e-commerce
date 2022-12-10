@@ -531,7 +531,7 @@ i:hover {
   column-gap: 1rem;
   width: 250px;
   height: 100px;
-  margin: auto;
+  margin: 50px auto;
 }
 .img-cart {
   width: 100%;
