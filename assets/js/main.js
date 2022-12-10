@@ -157,12 +157,9 @@ items.forEach((product) => {
   `;
 
   container.innerHTML += `
- 
-
-
 
 <div class="cart-content">
-<button onclick="addProduct(${id})" class="product-counter">+</button>
+<button onclick="addProduct(${id})" class="product-counter" id="product-counter">+</button>
 <img class="card-img mt-2" src="${image}" alt="Card image cap">
 <div class="card-body">
 <p class="card-price"> <span>$${price}.00</span>    |  Stock: ${quantity}</p>
@@ -175,26 +172,26 @@ items.forEach((product) => {
 
 function addProduct(id) {
   const item = items.find((product) => product.id === id);
-  cart.push(id);
+  cart.push(item);
   showCart();
 }
 
 const showCart = () => {
-  const modalBody = document.querySelector(".modal .modal-body");
+  const addCart = document.querySelector("#emptyCart");
 
+  addCart.innerHTML = "";
   cart.forEach((product) => {
     const { id, name, price, image, category, quantity } = product;
-    modalBody.innerHTML = `
-    <div class="modal-contenedor">
-    <div> 
-    img class= "img-fluid img-cart" src="${image}"
+    addCart.innerHTML += `
+    
+    <div  class="cart-products grid"> 
+    <img class= "img-cart one" src=${image}>
+    
+    <div class = "product-info two">
+    <p id="name">${name}<p>
+    <p id="quantity">Stock: ${quantity} |<span> $${price}.00</span><p>
+    
     </div>
-
-    <div>
-    <p>Product: ${name}<p>
-    <p>Price: ${price}<p>
-    <p>Quantity: ${quantity}<p>
-    <button class= "btn btn-danger"> Delete product</button>
     </div>
     
     `;
