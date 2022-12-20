@@ -427,6 +427,12 @@ i:hover {
   right: 1.5rem;
 }
 
+.btn-delete {
+  background: var(--container-color);
+  margin-left: 120px;
+  margin-top: 10px;
+}
+
 .menu-container {
   background-color: rgba(109, 109, 109, 0.737);
   width: 100%;

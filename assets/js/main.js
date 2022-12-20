@@ -83,6 +83,13 @@ const items = [
 
 let cart = [];
 
+const cartCounter = document.querySelector("#cart-counter");
+
+document.addEventListener("DOMContentLoaded", () => {
+  cart = JSON.parse(localStorage.getItem("cart")) || [];
+  showCart();
+});
+
 /*
 const cartProducts = [];
 
@@ -190,13 +197,32 @@ const showCart = () => {
     <div class = "product-info two">
     <p id="name">${name}<p>
     <p id="quantity">Stock: ${quantity} |<span> $${price}.00</span><p>
+
+    <div class="btn-delete">
+    <button onclick="deleteProduct(${id})" class="btn btn-danger">
+    <i class='bx bx-trash-alt bx-sm' ></i></button>
+    </div>
     
     </div>
     </div>
     
     `;
   });
+
+  cartCounter.textContent = cart.length;
+
+  saveStorage();
 };
+
+function deleteProduct(id) {
+  const productId = id;
+  cart = cart.filter((product) => product.id !== productId);
+  showCart();
+}
+
+function saveStorage() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 const nav = document.querySelector("nav");
 
